@@ -33,7 +33,7 @@ while True:
         # file.writelines(todos)
         # file.close()
 
-        functions.write_todos(filepath="todos.txt", todos_arg=todos)
+        functions.write_todos(todos_arg=todos)
         """with open('file/todo.txt', 'w') as file:
             file.writelines(todos)"""
 
@@ -63,7 +63,7 @@ while True:
     #elif 'edit' in user_action:
         #number = int(input("Number of the todo to edit:= "))
         try:
-            number=int(user_action.replace("add","").strip(" "))
+            number=int(user_action.replace("edit","").strip(" "))
             number = number - 1
 
             todos = functions.get_todos("todo.txt")
